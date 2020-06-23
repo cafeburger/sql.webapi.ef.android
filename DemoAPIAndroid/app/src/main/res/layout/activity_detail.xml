@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:id="@+id/tvCustomerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="客戶編號:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCustomerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="客戶編號:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvCustomerId"
+        app:layout_constraintStart_toEndOf="@+id/tvCustomerId" />
+
+    <TextView
+        android:id="@+id/tvCompanyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="公司名稱:"
+        app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+        app:layout_constraintTop_toBottomOf="@+id/tvCustomerId" />
+
+
+    <EditText
+        android:id="@+id/edtCompanyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="公司名稱:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvCompanyName"
+        app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+
+    <TextView
+        android:id="@+id/tvContactTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="連絡人職稱:"
+        app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+        app:layout_constraintTop_toBottomOf="@+id/tvCompanyName" />
+
+    <EditText
+        android:id="@+id/edtContactTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="連絡人職稱:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvContactTitle"
+        app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+
+    <TextView
+        android:id="@+id/tvContactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="連絡人:"
+        app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+        app:layout_constraintTop_toBottomOf="@+id/tvContactTitle" />
+
+    <EditText
+        android:id="@+id/edtContactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="連絡人:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvContactName"
+        app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+
+
+
+
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginBottom="32dp"
+        android:text="更新"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="取消"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
