@@ -4,14 +4,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import java.util.Collections;
 import java.util.List;
-
 import androidx.recyclerview.widget.RecyclerView;
 import github.nisrulz.recyclerviewhelper.RVHAdapter;
 import github.nisrulz.recyclerviewhelper.RVHViewHolder;
-
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder>
     implements RVHAdapter {
@@ -24,8 +21,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder>
 
     @Override
     public int getItemCount() {
-
-
         return dataList.size();
     }
 
