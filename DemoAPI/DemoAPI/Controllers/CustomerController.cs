@@ -34,7 +34,7 @@ namespace DemoAPI.Controllers
             {
                 await _context.Customers.AddAsync(customer);
                 _context.SaveChanges();
-                return Ok();
+                return Ok("{}");
             }
             catch (Exception ex)
             {
@@ -50,7 +50,7 @@ namespace DemoAPI.Controllers
                 _context.Customers.Attach(customer);
                 _context.Customers.Update(customer);
                 _context.SaveChanges();
-                return Ok();
+                return Ok("{}");
             }
             catch (Exception ex)
             {
@@ -67,11 +67,11 @@ namespace DemoAPI.Controllers
                 _context.Attach(customer);
                 _context.Customers.Remove(customer);
                 _context.SaveChanges();
-                return Ok();
+                return Ok("{}");
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ex.InnerException.Message);
             }
 
         }

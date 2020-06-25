@@ -1,119 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
-    <TextView
-        android:id="@+id/tvCustomerId"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        android:text="客戶編號:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edtCustomerId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="客戶編號:"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvCustomerId"
-        app:layout_constraintStart_toEndOf="@+id/tvCustomerId" />
-
-    <TextView
-        android:id="@+id/tvCompanyName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="公司名稱:"
-        app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
-        app:layout_constraintTop_toBottomOf="@+id/tvCustomerId" />
+        app:layout_constraintTop_toTopOf="parent">
 
 
-    <EditText
-        android:id="@+id/edtCompanyName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="公司名稱:"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvCompanyName"
-        app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+        <TextView
+            android:id="@+id/tvCustomerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:text="客戶編號:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvContactTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="連絡人職稱:"
-        app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
-        app:layout_constraintTop_toBottomOf="@+id/tvCompanyName" />
+        <EditText
+            android:id="@+id/edtCustomerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="客戶編號:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvCustomerId"
+            app:layout_constraintStart_toEndOf="@+id/tvCustomerId" />
 
-    <EditText
-        android:id="@+id/edtContactTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="連絡人職稱:"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvContactTitle"
-        app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
-
-    <TextView
-        android:id="@+id/tvContactName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="連絡人:"
-        app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
-        app:layout_constraintTop_toBottomOf="@+id/tvContactTitle" />
-
-    <EditText
-        android:id="@+id/edtContactName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="連絡人:"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvContactName"
-        app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+        <TextView
+            android:id="@+id/tvCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="公司名稱:"
+            app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+            app:layout_constraintTop_toBottomOf="@+id/tvCustomerId" />
 
 
+        <EditText
+            android:id="@+id/edtCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="公司名稱:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvCompanyName"
+            app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+
+        <TextView
+            android:id="@+id/tvContactTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="連絡人職稱:"
+            app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+            app:layout_constraintTop_toBottomOf="@+id/tvCompanyName" />
+
+        <EditText
+            android:id="@+id/edtContactTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="連絡人職稱:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvContactTitle"
+            app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+
+        <TextView
+            android:id="@+id/tvContactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="連絡人:"
+            app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+            app:layout_constraintTop_toBottomOf="@+id/tvContactTitle" />
+
+        <EditText
+            android:id="@+id/edtContactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="連絡人:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvContactName"
+            app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+
+        <TextView
+            android:id="@+id/tvCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="國家:"
+            app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+            app:layout_constraintTop_toBottomOf="@+id/tvContactName" />
+
+        <EditText
+            android:id="@+id/edtCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="國家:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvCountry"
+            app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
 
 
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="城市:"
+            app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+            app:layout_constraintTop_toBottomOf="@+id/tvCountry" />
+
+        <EditText
+            android:id="@+id/edtCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="城市:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvCity"
+            app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
 
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginBottom="32dp"
-        android:text="更新"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/tvRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="地區:"
+            app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+            app:layout_constraintTop_toBottomOf="@+id/tvCity" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="32dp"
-        android:text="取消"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <EditText
+            android:id="@+id/edtRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="地區:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvRegion"
+            app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+
+        <TextView
+            android:id="@+id/tvPostalCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="郵遞區號:"
+            app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+            app:layout_constraintTop_toBottomOf="@+id/tvRegion" />
+
+        <EditText
+            android:id="@+id/edtPostalCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="郵遞區號:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvPostalCode"
+            app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
 
 
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="地址:"
+            app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+            app:layout_constraintTop_toBottomOf="@+id/tvPostalCode" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/edtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="地址:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvAddress"
+            app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="電話:"
+            app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="電話:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvPhone"
+            app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+
+
+        <TextView
+            android:id="@+id/tvFax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="傳真:"
+            app:layout_constraintStart_toStartOf="@+id/tvCustomerId"
+            app:layout_constraintTop_toBottomOf="@+id/tvPhone" />
+
+        <EditText
+            android:id="@+id/edtFax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="傳真:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvFax"
+            app:layout_constraintStart_toStartOf="@+id/edtCustomerId" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="32dp"
+            android:onClick="onUpdateButtonClicked"
+            android:text="更新"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFax" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:onClick="onCancelButtonClicked"
+            android:text="取消"
+            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
